@@ -10,13 +10,18 @@ const ENTRY_WHATSAPP = "entry.1194023553";
 const ENTRY_GUEST_COUNT = "entry.1804860749";
 
 // URL example:
-// https://domain.com/?to=Prof.%20Dr.%20Febri%20Al-Hafis
+// https://domain.com/?to=Prof.%20Dr.%20Febri%20Al-Hafis&jabatan=Rektor
 const params = new URLSearchParams(window.location.search);
 const guestName = decodeURIComponent(params.get("to") || "GUEST")
   .replace(/\+/g, " ")
   .trim() || "GUEST";
 
+const guestTitle = params.get("jabatan")
+  ? decodeURIComponent(params.get("jabatan")).replace(/\+/g, " ").trim()
+  : "";
+
 const guestNameEl = document.getElementById("guestName");
+const guestTitleEl = document.getElementById("guestTitle");
 const formNameEl = document.getElementById("formName");
 const thankYouNameEl = document.getElementById("thankYouName");
 
