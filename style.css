@@ -199,6 +199,14 @@ a {
   display: none;
 }
 
+.guest-title p {
+  margin: 0;
+}
+
+.guest-title p + p {
+  margin-top: 2px;
+}
+
 .turut-text {
   color: #cfc9bf;
   font-size: clamp(11px, 3.2vw, 13px);
