@@ -42,6 +42,10 @@ const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP
 const eventDayText = dayNames[eventDateObject.getDay()];
 const eventDateText = `${monthNames[eventDateObject.getMonth()]} ${eventDateObject.getDate()}, ${eventDateObject.getFullYear()}`;
 
+const monthNamesID = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+const eventDateTextID = `${eventDateObject.getDate()} ${monthNamesID[eventDateObject.getMonth()]} ${eventDateObject.getFullYear()}`;
+const countdownLabelEl = document.getElementById("countdownLabel");
+
 document.querySelectorAll(".event-row span:first-child").forEach(el => el.textContent = eventDayText);
 document.querySelectorAll(".event-row strong").forEach(el => el.textContent = eventDateText);
 document.querySelectorAll(".info-card").forEach(card => {
@@ -50,6 +54,10 @@ document.querySelectorAll(".info-card").forEach(card => {
     if (value) value.textContent = eventDateText;
   }
 });
+if (countdownLabelEl) {
+  countdownLabelEl.textContent = `Menuju ${eventDateTextID}, pukul 07.00 WIB.`;
+}
+
 document.querySelectorAll(".detail-item").forEach(item => {
     const label = item.querySelector("span")?.textContent.trim().toUpperCase();
 
