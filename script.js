@@ -77,6 +77,7 @@ document.querySelectorAll(".detail-item").forEach(item => {
 
 guestNameEl.textContent = guestName;
 guestTitleEl.textContent = guestTitle;
+turutTextEl.textContent = guestTurut ? `Turut mengundang ${guestTurut}.` : "";
 formNameEl.value = guestName;
 thankYouNameEl.textContent = guestName;
 
