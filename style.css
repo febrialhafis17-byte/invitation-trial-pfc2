@@ -199,6 +199,21 @@ a {
   display: none;
 }
 
+.turut-text {
+  color: #cfc9bf;
+  font-size: clamp(11px, 3.2vw, 13px);
+  font-style: italic;
+  line-height: 1.4;
+  margin: 10px auto 0;
+  max-width: 340px;
+  max-width: 92%;
+  overflow-wrap: anywhere;
+}
+
+.turut-text:empty {
+  display: none;
+}
+
 .hero h1,
 .hero h2,
 .section h2,
