@@ -63,6 +63,7 @@ document.querySelectorAll(".detail-item").forEach(item => {
 });
 
 guestNameEl.textContent = guestName;
+guestTitleEl.textContent = guestTitle;
 formNameEl.value = guestName;
 thankYouNameEl.textContent = guestName;
 
