@@ -76,7 +76,16 @@ document.querySelectorAll(".detail-item").forEach(item => {
 });
 
 guestNameEl.textContent = guestName;
-guestTitleEl.textContent = guestTitle;
+guestTitleEl.innerHTML = "";
+guestTitle
+  .split("|")
+  .map(line => line.trim())
+  .filter(Boolean)
+  .forEach(line => {
+    const p = document.createElement("p");
+    p.textContent = line;
+    guestTitleEl.appendChild(p);
+  });
 turutTextEl.textContent = guestTurut ? `Turut mengundang ${guestTurut}.` : "";
 formNameEl.value = guestName;
 thankYouNameEl.textContent = guestName;
