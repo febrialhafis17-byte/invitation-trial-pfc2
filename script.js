@@ -20,8 +20,13 @@ const guestTitle = params.get("jabatan")
   ? decodeURIComponent(params.get("jabatan")).replace(/\+/g, " ").trim()
   : "";
 
+const guestTurut = params.get("turut")
+  ? decodeURIComponent(params.get("turut")).replace(/\+/g, " ").trim()
+  : "";
+
 const guestNameEl = document.getElementById("guestName");
 const guestTitleEl = document.getElementById("guestTitle");
+const turutTextEl = document.getElementById("turutText");
 const formNameEl = document.getElementById("formName");
 const thankYouNameEl = document.getElementById("thankYouName");
 
